@@ -32,8 +32,9 @@ app.get("/", (req, res) => {
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
-// require("./routes/user.routes.js")(app);
+require("./routes/user.routes.js")(app);
 require("./routes/auth.routes.js")(app);
+require("./routes/order.routes.js")(app);
 // require("./routes/card.routes.js")(app);
 // require("./routes/game.routes.js")(app);
 // require("./routes/team.routes.js")(app);
